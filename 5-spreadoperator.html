@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Operators</h1>
+<h2>The ... Operator</h2>
+
+<p>The "spread" operator spreads elements of iterable objects:</p>
+
+Output of cars1 is:
+<p id="demo1"></p>
+Output of cars2 is:
+<p id="demo2"></p>
+Output of cars3 is:
+<p id="demo3"></p>
+
+
+<p>The "Spread" operator can be used to expand an iterable into more arguments for function calls:</p>
+
+<p id="demo"></p>
+
+<script>
+const cars1 = ["Saab", "Volvo", "BMW"];
+const cars2 = ["Saab", "Volvo", ...["BMW"]];
+const cars3 = ["Saab", "Volvo", [..."BMW"]];
+
+const numbers = [23,55,21,87,56];
+let maxValue = Math.max(...numbers);
+
+document.getElementById("demo1").innerHTML = cars1; 
+document.getElementById("demo2").innerHTML = cars2;
+document.getElementById("demo3").innerHTML = cars3;
+document.getElementById("demo").innerHTML = maxValue;
+</script>
+
+</body>
+</html>
